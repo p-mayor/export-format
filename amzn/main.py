@@ -1,7 +1,7 @@
 import csv
 import sys
 
-with open(sys.argv[1]) as csv_in, open('test-out.csv','w', newline='') as csv_out :
+with open(sys.argv[1]) as csv_in, open('output.csv','w', newline='') as csv_out :
     grades = csv.reader(csv_in)
     grades_writer = csv.writer(csv_out, delimiter=',')
     delete_names = ['Test Student','Stanford Rosenthal', 'Randy Cox', '    Points Possible']
