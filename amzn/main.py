@@ -4,11 +4,9 @@ import sys
 with open(sys.argv[1]) as csv_in, open('output.csv','w', newline='') as csv_out :
     grades = csv.reader(csv_in)
     grades_writer = csv.writer(csv_out, delimiter=',')
-    delete_names = ['Test Student','Stanford Rosenthal', 'Randy Cox', '    Points Possible']
+    delete_names = ['Test Student','Stanford Rosenthal', 'Randy Cox', '    Points Possible', 'DMG (Student)']
     line_count = 0
     for row in grades:
-        if line_count == 0:
-            print(row)
         letter_grade_field = row[-2]
         student_name_field = row[0]
         if len(letter_grade_field) == 2:
